@@ -8,6 +8,8 @@ class PartyController < ApplicationController
 
   def score
     @word        = params[:word]
+    @grid        = params[:grid]
+    @result      = in_grid?(@word,@grid)
     @start_time  = Time.parse(params[:start_time])
     @translation = find_on_wordreference(@word)
     @end_time    = Time.now

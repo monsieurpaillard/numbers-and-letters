@@ -23,7 +23,12 @@ def find_on_wordreference(word)
   end
 end
 
-def in_grid?(word,grid)
-  grid = generate_grid(grid)
-
+def in_grid?(word, grid)
+  array_from_word = word.split('')
+  array_from_grid = grid.split('')
+  if array_from_grid.include?(array_from_word)
+    word
+  else
+    "not in the grid"
+  end
 end
