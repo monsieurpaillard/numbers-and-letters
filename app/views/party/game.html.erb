@@ -1,0 +1,32 @@
+
+
+<h1>******** Welcome to the longest word-game !********</h1>
+<h2>Here is your grid :</h2>
+<h3><%= @grid %></h3>
+
+<h1>*****************************************************</h1>
+
+<h1>What's your best shot ?<h1>
+<% start_time = Time.now %>
+
+  <form action="/score">
+    <label for="question">Go go go:  </label>
+    <input type="text" id="question" name="word" placeholder="what is you answer?">
+    <input type="submit" value="Go on!">
+  </form>
+
+<% end_time = Time.now %>
+
+
+
+
+<!-- result = run_game(attempt, grid, start_time, end_time)
+
+puts "Your word: #{attempt}"
+puts "Time Taken to answer: #{result[:time]}"
+puts "Translation: #{result[:translation]}"
+puts "Your score: #{result[:score]}"
+puts "Message: #{result[:message]}"
+
+puts "*****************************************************"
+ -->
